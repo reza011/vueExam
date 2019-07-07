@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>برنامه محیا</title>
+</head>
+<body>
+    <div id="app" dir="rtl">
+        <input type="text" v-on:input="changeTitle">
+        <p>سلام {{title}}</p>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#app",
+        data: {
+            title: "برنامه نویس",
+            name: 'رضا غلامعلی تبار',
+        },
+        methods:{
+            changeTitle: function(event){
+                this.title = event.target.value;
+            }
+        }
+    });
+    </script>
+</body>
+</html>
